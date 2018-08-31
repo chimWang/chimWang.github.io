@@ -304,7 +304,6 @@
 <p>JS的传统方法是通过构造函数，定义生成新对象。在ES6中新增了类的概念，使用class关键字声明一个类，之后来实例化对象。</p>
 <p>在ES6中class仅仅是一个语法糖，不是真正的类，本质上还是构造函数+原型实现继承</p>
 <p><em>构造函数实例：</em></p>
-<p>（<code></code>）</p>
 <pre><code>const Demo = function (a, b) {
     this.a = a;
     this.b = b;
@@ -320,9 +319,7 @@ Demo.prototype = {
 
 
 const demo = new Demo(&apos;hello&apos;, &apos;world&apos;).print();
-</code></pre><p>（<code></code>）</p>
-<p><em>class实例：</em></p>
-<p>(<code></code>)</p>
+</code></pre><p><em>class实例：</em></p>
 <pre><code>class Demo {
     constructor(a, b) {
         this.a = a;
@@ -335,8 +332,7 @@ const demo = new Demo(&apos;hello&apos;, &apos;world&apos;).print();
     }
 }；
 const demo = new Demo(&apos;hello&apos;, &apos;world&apos;).print();
-</code></pre><p>(<code></code>)</p>
-<p><strong>重点：</strong></p>
+</code></pre><p><strong>重点：</strong></p>
 <ul>
 <li><p>Demo中的constructor方法是构造方法，this关键字则代表实例对象。也就是说，ES5的构造函数Demo，对应ES6的Demo这个类的构造方法</p>
 </li>
