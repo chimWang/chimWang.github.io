@@ -300,14 +300,14 @@
       
         
           
-            <p>###一、CommonJS规范和ES6规范<br>CommonJS规范：require、module.exports、exports<br>ES6规范：import、export、export default</p>
-<p>###二、module.exports和exports的区别与联系<br>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
+            <h2 id="一、CommonJS规范和ES6规范"><a href="#一、CommonJS规范和ES6规范" class="headerlink" title="一、CommonJS规范和ES6规范"></a>一、CommonJS规范和ES6规范</h2><p>CommonJS规范：require、module.exports、exports<br>ES6规范：import、export、export default</p>
+<h2 id="二、module-exports和exports的区别与联系"><a href="#二、module-exports和exports的区别与联系" class="headerlink" title="二、module.exports和exports的区别与联系"></a>二、module.exports和exports的区别与联系</h2><p>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
 <p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。</p>
 <p>其实exports变量是指向module.exports，加载模块实际是加载该模块的module.exports。这等同在每个模块头部，有一行这样的命令。</p>
-<p>var exports = module.exports;</p>
-<p>###三、export和export default的区别与联系<br>export其实和export default就是写法上面有点差别，一个是导出一个个单独接口，一个是默认导出一个整体接口。</p>
+<pre><code>var exports = module.exports;
+</code></pre><h2 id="三、export和export-default的区别与联系"><a href="#三、export和export-default的区别与联系" class="headerlink" title="三、export和export default的区别与联系"></a>三、export和export default的区别与联系</h2><p>export其实和export default就是写法上面有点差别，一个是导出一个个单独接口，一个是默认导出一个整体接口。</p>
 <p>一个模块只能有一个默认输出，所以export default只能使用一次。</p>
-<p>###四、import和require的区别与联系<br>import和require是分别属于ES6和CommonJS的两种导入模块的语法。</p>
+<h2 id="四、import和require的区别与联系"><a href="#四、import和require的区别与联系" class="headerlink" title="四、import和require的区别与联系"></a>四、import和require的区别与联系</h2><p>import和require是分别属于ES6和CommonJS的两种导入模块的语法。</p>
 
           
         

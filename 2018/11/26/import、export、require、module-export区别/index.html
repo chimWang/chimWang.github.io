@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="###一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default ###二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块">
+<meta name="description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
 <meta property="og:type" content="article">
 <meta property="og:title" content="import、export、require、module.export区别">
 <meta property="og:url" content="http://yoursite.com/2018/11/26/import、export、require、module-export区别/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="###一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default ###二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块">
+<meta property="og:description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T08:49:32.235Z">
+<meta property="og:updated_time" content="2018-11-26T08:59:35.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="import、export、require、module.export区别">
-<meta name="twitter:description" content="###一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default ###二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块">
+<meta name="twitter:description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
 
 
 
@@ -299,14 +299,14 @@
       
 
       
-        <p>###一、CommonJS规范和ES6规范<br>CommonJS规范：require、module.exports、exports<br>ES6规范：import、export、export default</p>
-<p>###二、module.exports和exports的区别与联系<br>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
+        <h2 id="一、CommonJS规范和ES6规范"><a href="#一、CommonJS规范和ES6规范" class="headerlink" title="一、CommonJS规范和ES6规范"></a>一、CommonJS规范和ES6规范</h2><p>CommonJS规范：require、module.exports、exports<br>ES6规范：import、export、export default</p>
+<h2 id="二、module-exports和exports的区别与联系"><a href="#二、module-exports和exports的区别与联系" class="headerlink" title="二、module.exports和exports的区别与联系"></a>二、module.exports和exports的区别与联系</h2><p>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
 <p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。</p>
 <p>其实exports变量是指向module.exports，加载模块实际是加载该模块的module.exports。这等同在每个模块头部，有一行这样的命令。</p>
-<p>var exports = module.exports;</p>
-<p>###三、export和export default的区别与联系<br>export其实和export default就是写法上面有点差别，一个是导出一个个单独接口，一个是默认导出一个整体接口。</p>
+<pre><code>var exports = module.exports;
+</code></pre><h2 id="三、export和export-default的区别与联系"><a href="#三、export和export-default的区别与联系" class="headerlink" title="三、export和export default的区别与联系"></a>三、export和export default的区别与联系</h2><p>export其实和export default就是写法上面有点差别，一个是导出一个个单独接口，一个是默认导出一个整体接口。</p>
 <p>一个模块只能有一个默认输出，所以export default只能使用一次。</p>
-<p>###四、import和require的区别与联系<br>import和require是分别属于ES6和CommonJS的两种导入模块的语法。</p>
+<h2 id="四、import和require的区别与联系"><a href="#四、import和require的区别与联系" class="headerlink" title="四、import和require的区别与联系"></a>四、import和require的区别与联系</h2><p>import和require是分别属于ES6和CommonJS的两种导入模块的语法。</p>
 
       
     </div>
@@ -391,8 +391,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -434,6 +443,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、CommonJS规范和ES6规范"><span class="nav-number">1.</span> <span class="nav-text">一、CommonJS规范和ES6规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、module-exports和exports的区别与联系"><span class="nav-number">2.</span> <span class="nav-text">二、module.exports和exports的区别与联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、export和export-default的区别与联系"><span class="nav-number">3.</span> <span class="nav-text">三、export和export default的区别与联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、import和require的区别与联系"><span class="nav-number">4.</span> <span class="nav-text">四、import和require的区别与联系</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
