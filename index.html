@@ -229,6 +229,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/web前端工程化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/27/web前端工程化/" itemprop="url">web前端工程化</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T11:53:15+08:00">
+                2018-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h2><h3 id="四大特点"><a href="#四大特点" class="headerlink" title="四大特点"></a>四大特点</h3><p>工程化四大特点：模块化、组件化、自动化、规范化</p>
+<ol>
+<li><p>模块化：将一个大文件拆分成相互依赖的小文件，再进行统一的拼装和加载</p>
+</li>
+<li><p>组件化：组件化≠模块化。模板化是在文件层面上，对代码和资源的拆分；组件化是在设计层面上，对于UI的拆分。页面上所有的东西都可以看成组件，页面是个大型组件，可以拆成若干个中型组件，然后中型组件还可以再拆，拆成若干个小型组件，小型组件也可以再拆，直到拆成DOM元素为止。</p>
+</li>
+<li><p>自动化：“简单重复的工作交给机器来做”，自动化也就是有很多自动化工具代替我们来完成，例如持续集成、自动化构建、自动化部署、自动化测试等等。</p>
+</li>
+<li><p>规范化：</p>
+</li>
+</ol>
+<ul>
+<li>目录结构的制定</li>
+<li>编码规范</li>
+<li>前后端接口规范</li>
+<li>文档规范</li>
+<li>组件管理</li>
+<li>Git分支管理</li>
+<li>Commit描述规范</li>
+<li>定期codeReview</li>
+<li>视觉图标规范</li>
+</ul>
+<h3 id="前端工程化分为三大块"><a href="#前端工程化分为三大块" class="headerlink" title="前端工程化分为三大块"></a>前端工程化分为三大块</h3><ol>
+<li>Node 服务层：主要做数据的代理和 Mock，url 的路由分发，还有模板渲染</li>
+<li>Web 应用开发层：主要专注 Web 交互体验</li>
+<li>前端运维层：构建布署、日志监控等</li>
+</ol>
+<p><img src="/2018/11/27/web前端工程化/./web前端工程化/img1.png" alt="no"></p>
+<h2 id="node服务端渲染"><a href="#node服务端渲染" class="headerlink" title="node服务端渲染"></a>node服务端渲染</h2><h3 id="为什么使用服务端渲染"><a href="#为什么使用服务端渲染" class="headerlink" title="为什么使用服务端渲染"></a>为什么使用服务端渲染</h3><p>后端提供的接口所返回的数据格式有时候不太适合前端直接使用，这些处理虽可以放在前端来进行，但也许数据量一大便会浪费浏览器性能。因而现今，增加node端便是一种良好的解决方案。</p>
+<h3 id="客户端渲染路线："><a href="#客户端渲染路线：" class="headerlink" title="客户端渲染路线："></a>客户端渲染路线：</h3><ol>
+<li>请求一个html</li>
+<li>服务端返回一个html  </li>
+<li>浏览器下载html里面的js/css文件</li>
+<li>等待js文件下载完成</li>
+<li>等待js加载并初始化完成</li>
+<li>js代码终于可以运行，由js代码向后端请求数据( ajax/fetch )</li>
+<li>等待后端数据返回</li>
+<li>dom( 客户端 )从无到完整地，把数据渲染为响应页面</li>
+</ol>
+<h3 id="服务端渲染路线"><a href="#服务端渲染路线" class="headerlink" title="服务端渲染路线"></a>服务端渲染路线</h3><ol>
+<li>请求一个html</li>
+<li>服务端请求数据( 内网请求快 )</li>
+<li>服务器初始渲染（服务端性能好，较快）</li>
+<li>服务端返回已经有正确内容的页面</li>
+<li>客户端请求js/css文件</li>
+<li>等待js文件下载完成</li>
+<li>等待js加载并初始化完成</li>
+<li>react-dom( 客户端 )把剩下一部分渲染完成( 内容小，渲染快 )</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/import、export、require、module-export区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -798,7 +966,7 @@ const demo = new Demo(&apos;hello&apos;, &apos;world&apos;).print();
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

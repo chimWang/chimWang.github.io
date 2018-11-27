@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
+<meta name="description" content="前端工程化四大特点工程化四大特点：模块化、组件化、自动化、规范化  模块化：将一个大文件拆分成相互依赖的小文件，再进行统一的拼装和加载  组件化：组件化≠模块化。模板化是在文件层面上，对代码和资源的拆分；组件化是在设计层面上，对于UI的拆分。页面上所有的东西都可以看成组件，页面是个大型组件，可以拆成若干个中型组件，然后中型组件还可以再拆，拆成若干个小型组件，小型组件也可以再拆，直到拆成DOM元素为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="import、export、require、module.export区别">
-<meta property="og:url" content="http://yoursite.com/2018/11/26/import、export、require、module-export区别/index.html">
+<meta property="og:title" content="web前端工程化">
+<meta property="og:url" content="http://yoursite.com/2018/11/27/web前端工程化/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
+<meta property="og:description" content="前端工程化四大特点工程化四大特点：模块化、组件化、自动化、规范化  模块化：将一个大文件拆分成相互依赖的小文件，再进行统一的拼装和加载  组件化：组件化≠模块化。模板化是在文件层面上，对代码和资源的拆分；组件化是在设计层面上，对于UI的拆分。页面上所有的东西都可以看成组件，页面是个大型组件，可以拆成若干个中型组件，然后中型组件还可以再拆，拆成若干个小型组件，小型组件也可以再拆，直到拆成DOM元素为">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T09:00:55.030Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/27/web前端工程化/web前端工程化/img1.png">
+<meta property="og:updated_time" content="2018-11-27T04:02:54.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="import、export、require、module.export区别">
-<meta name="twitter:description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
+<meta name="twitter:title" content="web前端工程化">
+<meta name="twitter:description" content="前端工程化四大特点工程化四大特点：模块化、组件化、自动化、规范化  模块化：将一个大文件拆分成相互依赖的小文件，再进行统一的拼装和加载  组件化：组件化≠模块化。模板化是在文件层面上，对代码和资源的拆分；组件化是在设计层面上，对于UI的拆分。页面上所有的东西都可以看成组件，页面是个大型组件，可以拆成若干个中型组件，然后中型组件还可以再拆，拆成若干个小型组件，小型组件也可以再拆，直到拆成DOM元素为">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/27/web前端工程化/web前端工程化/img1.png">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/26/import、export、require、module-export区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/27/web前端工程化/"/>
 
 
 
 
 
-  <title>import、export、require、module.export区别 | Hexo</title>
+  <title>web前端工程化 | Hexo</title>
   
 
 
@@ -232,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/import、export、require、module-export区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/web前端工程化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">import、export、require、module.export区别</h1>
+          <h1 class="post-title" itemprop="name headline">web前端工程化</h1>
         
 
         <div class="post-meta">
@@ -261,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T16:36:18+08:00">
-                2018-11-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T11:53:15+08:00">
+                2018-11-27
               </time>
             
 
@@ -299,14 +301,55 @@
       
 
       
-        <h2 id="一、CommonJS规范和ES6规范"><a href="#一、CommonJS规范和ES6规范" class="headerlink" title="一、CommonJS规范和ES6规范"></a>一、CommonJS规范和ES6规范</h2><p>CommonJS规范：require、module.exports、exports<br>ES6规范：import、export、export default</p>
-<h2 id="二、module-exports和exports的区别与联系"><a href="#二、module-exports和exports的区别与联系" class="headerlink" title="二、module.exports和exports的区别与联系"></a>二、module.exports和exports的区别与联系</h2><p>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
-<p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。</p>
-<p>其实exports变量是指向module.exports，加载模块实际是加载该模块的module.exports。这等同在每个模块头部，有一行这样的命令。</p>
-<pre><code>var exports = module.exports;
-</code></pre><h2 id="三、export和export-default的区别与联系"><a href="#三、export和export-default的区别与联系" class="headerlink" title="三、export和export default的区别与联系"></a>三、export和export default的区别与联系</h2><p>export其实和export default就是写法上面有点差别，一个是导出一个个单独接口，一个是默认导出一个整体接口。</p>
-<p>一个模块只能有一个默认输出，所以export default只能使用一次。</p>
-<h2 id="四、import和require的区别与联系"><a href="#四、import和require的区别与联系" class="headerlink" title="四、import和require的区别与联系"></a>四、import和require的区别与联系</h2><p>import和require是分别属于ES6和CommonJS的两种导入模块的语法。</p>
+        <h2 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h2><h3 id="四大特点"><a href="#四大特点" class="headerlink" title="四大特点"></a>四大特点</h3><p>工程化四大特点：模块化、组件化、自动化、规范化</p>
+<ol>
+<li><p>模块化：将一个大文件拆分成相互依赖的小文件，再进行统一的拼装和加载</p>
+</li>
+<li><p>组件化：组件化≠模块化。模板化是在文件层面上，对代码和资源的拆分；组件化是在设计层面上，对于UI的拆分。页面上所有的东西都可以看成组件，页面是个大型组件，可以拆成若干个中型组件，然后中型组件还可以再拆，拆成若干个小型组件，小型组件也可以再拆，直到拆成DOM元素为止。</p>
+</li>
+<li><p>自动化：“简单重复的工作交给机器来做”，自动化也就是有很多自动化工具代替我们来完成，例如持续集成、自动化构建、自动化部署、自动化测试等等。</p>
+</li>
+<li><p>规范化：</p>
+</li>
+</ol>
+<ul>
+<li>目录结构的制定</li>
+<li>编码规范</li>
+<li>前后端接口规范</li>
+<li>文档规范</li>
+<li>组件管理</li>
+<li>Git分支管理</li>
+<li>Commit描述规范</li>
+<li>定期codeReview</li>
+<li>视觉图标规范</li>
+</ul>
+<h3 id="前端工程化分为三大块"><a href="#前端工程化分为三大块" class="headerlink" title="前端工程化分为三大块"></a>前端工程化分为三大块</h3><ol>
+<li>Node 服务层：主要做数据的代理和 Mock，url 的路由分发，还有模板渲染</li>
+<li>Web 应用开发层：主要专注 Web 交互体验</li>
+<li>前端运维层：构建布署、日志监控等</li>
+</ol>
+<p><img src="/2018/11/27/web前端工程化/./web前端工程化/img1.png" alt="no"></p>
+<h2 id="node服务端渲染"><a href="#node服务端渲染" class="headerlink" title="node服务端渲染"></a>node服务端渲染</h2><h3 id="为什么使用服务端渲染"><a href="#为什么使用服务端渲染" class="headerlink" title="为什么使用服务端渲染"></a>为什么使用服务端渲染</h3><p>后端提供的接口所返回的数据格式有时候不太适合前端直接使用，这些处理虽可以放在前端来进行，但也许数据量一大便会浪费浏览器性能。因而现今，增加node端便是一种良好的解决方案。</p>
+<h3 id="客户端渲染路线："><a href="#客户端渲染路线：" class="headerlink" title="客户端渲染路线："></a>客户端渲染路线：</h3><ol>
+<li>请求一个html</li>
+<li>服务端返回一个html  </li>
+<li>浏览器下载html里面的js/css文件</li>
+<li>等待js文件下载完成</li>
+<li>等待js加载并初始化完成</li>
+<li>js代码终于可以运行，由js代码向后端请求数据( ajax/fetch )</li>
+<li>等待后端数据返回</li>
+<li>dom( 客户端 )从无到完整地，把数据渲染为响应页面</li>
+</ol>
+<h3 id="服务端渲染路线"><a href="#服务端渲染路线" class="headerlink" title="服务端渲染路线"></a>服务端渲染路线</h3><ol>
+<li>请求一个html</li>
+<li>服务端请求数据( 内网请求快 )</li>
+<li>服务器初始渲染（服务端性能好，较快）</li>
+<li>服务端返回已经有正确内容的页面</li>
+<li>客户端请求js/css文件</li>
+<li>等待js文件下载完成</li>
+<li>等待js加载并初始化完成</li>
+<li>react-dom( 客户端 )把剩下一部分渲染完成( 内容小，渲染快 )</li>
+</ol>
 
       
     </div>
@@ -331,8 +374,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/03/ES6——let和const/" rel="next" title="ES6——let和const">
-                <i class="fa fa-chevron-left"></i> ES6——let和const
+              <a href="/2018/11/26/import、export、require、module-export区别/" rel="next" title="import、export、require、module.export区别">
+                <i class="fa fa-chevron-left"></i> import、export、require、module.export区别
               </a>
             
           </div>
@@ -340,10 +383,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/27/web前端工程化/" rel="prev" title="web前端工程化">
-                web前端工程化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -457,7 +496,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、CommonJS规范和ES6规范"><span class="nav-number">1.</span> <span class="nav-text">一、CommonJS规范和ES6规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、module-exports和exports的区别与联系"><span class="nav-number">2.</span> <span class="nav-text">二、module.exports和exports的区别与联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、export和export-default的区别与联系"><span class="nav-number">3.</span> <span class="nav-text">三、export和export default的区别与联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、import和require的区别与联系"><span class="nav-number">4.</span> <span class="nav-text">四、import和require的区别与联系</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端工程化"><span class="nav-number">1.</span> <span class="nav-text">前端工程化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四大特点"><span class="nav-number">1.1.</span> <span class="nav-text">四大特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端工程化分为三大块"><span class="nav-number">1.2.</span> <span class="nav-text">前端工程化分为三大块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node服务端渲染"><span class="nav-number">2.</span> <span class="nav-text">node服务端渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用服务端渲染"><span class="nav-number">2.1.</span> <span class="nav-text">为什么使用服务端渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端渲染路线："><span class="nav-number">2.2.</span> <span class="nav-text">客户端渲染路线：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端渲染路线"><span class="nav-number">2.3.</span> <span class="nav-text">服务端渲染路线</span></a></li></ol></li></ol></div>
             
 
           </div>
