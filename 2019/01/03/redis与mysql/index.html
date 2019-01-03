@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
+<meta name="description" content="redis:内存型数据库，数据存储在内存中，访问速度快mysql:关系型数据库，持久化存储，会涉及到硬盘IO操作，为了提高性能，可使用缓存技术 redis和mongodb都数据非关系型数据库 web应用中一般采用mysql+redis的方式，web应用每次先访问redis，如果没有找到数据，才去访问mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="import、export、require、module.export区别">
-<meta property="og:url" content="http://yoursite.com/2018/11/26/import、export、require、module-export区别/index.html">
+<meta property="og:title" content="redis与mysql">
+<meta property="og:url" content="http://yoursite.com/2019/01/03/redis与mysql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
+<meta property="og:description" content="redis:内存型数据库，数据存储在内存中，访问速度快mysql:关系型数据库，持久化存储，会涉及到硬盘IO操作，为了提高性能，可使用缓存技术 redis和mongodb都数据非关系型数据库 web应用中一般采用mysql+redis的方式，web应用每次先访问redis，如果没有找到数据，才去访问mysql">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T09:00:55.030Z">
+<meta property="og:updated_time" content="2019-01-03T09:04:50.383Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="import、export、require、module.export区别">
-<meta name="twitter:description" content="一、CommonJS规范和ES6规范CommonJS规范：require、module.exports、exportsES6规范：import、export、export default 二、module.exports和exports的区别与联系每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。 CommonJS规范规定，每个模块内部，mod">
+<meta name="twitter:title" content="redis与mysql">
+<meta name="twitter:description" content="redis:内存型数据库，数据存储在内存中，访问速度快mysql:关系型数据库，持久化存储，会涉及到硬盘IO操作，为了提高性能，可使用缓存技术 redis和mongodb都数据非关系型数据库 web应用中一般采用mysql+redis的方式，web应用每次先访问redis，如果没有找到数据，才去访问mysql">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/26/import、export、require、module-export区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/03/redis与mysql/"/>
 
 
 
 
 
-  <title>import、export、require、module.export区别 | Hexo</title>
+  <title>redis与mysql | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/import、export、require、module-export区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/03/redis与mysql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">import、export、require、module.export区别</h1>
+          <h1 class="post-title" itemprop="name headline">redis与mysql</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T16:36:18+08:00">
-                2018-11-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T17:01:07+08:00">
+                2019-01-03
               </time>
             
 
@@ -299,14 +299,9 @@
       
 
       
-        <h2 id="一、CommonJS规范和ES6规范"><a href="#一、CommonJS规范和ES6规范" class="headerlink" title="一、CommonJS规范和ES6规范"></a>一、CommonJS规范和ES6规范</h2><p>CommonJS规范：require、module.exports、exports<br>ES6规范：import、export、export default</p>
-<h2 id="二、module-exports和exports的区别与联系"><a href="#二、module-exports和exports的区别与联系" class="headerlink" title="二、module.exports和exports的区别与联系"></a>二、module.exports和exports的区别与联系</h2><p>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
-<p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。</p>
-<p>其实exports变量是指向module.exports，加载模块实际是加载该模块的module.exports。这等同在每个模块头部，有一行这样的命令。</p>
-<pre><code>var exports = module.exports;
-</code></pre><h2 id="三、export和export-default的区别与联系"><a href="#三、export和export-default的区别与联系" class="headerlink" title="三、export和export default的区别与联系"></a>三、export和export default的区别与联系</h2><p>export其实和export default就是写法上面有点差别，一个是导出一个个单独接口，一个是默认导出一个整体接口。</p>
-<p>一个模块只能有一个默认输出，所以export default只能使用一次。</p>
-<h2 id="四、import和require的区别与联系"><a href="#四、import和require的区别与联系" class="headerlink" title="四、import和require的区别与联系"></a>四、import和require的区别与联系</h2><p>import和require是分别属于ES6和CommonJS的两种导入模块的语法。</p>
+        <p>redis:内存型数据库，数据存储在内存中，访问速度快<br>mysql:关系型数据库，持久化存储，会涉及到硬盘IO操作，为了提高性能，可使用缓存技术</p>
+<p>redis和mongodb都数据非关系型数据库</p>
+<p>web应用中一般采用mysql+redis的方式，web应用每次先访问redis，如果没有找到数据，才去访问mysql</p>
 
       
     </div>
@@ -331,8 +326,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/03/ES6——let和const/" rel="next" title="ES6——let和const">
-                <i class="fa fa-chevron-left"></i> ES6——let和const
+              <a href="/2018/12/20/关于BFC/" rel="next" title="关于BFC">
+                <i class="fa fa-chevron-left"></i> 关于BFC
               </a>
             
           </div>
@@ -340,10 +335,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/27/web前端工程化/" rel="prev" title="web前端工程化">
-                web前端工程化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -395,17 +386,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -447,22 +429,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、CommonJS规范和ES6规范"><span class="nav-number">1.</span> <span class="nav-text">一、CommonJS规范和ES6规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、module-exports和exports的区别与联系"><span class="nav-number">2.</span> <span class="nav-text">二、module.exports和exports的区别与联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、export和export-default的区别与联系"><span class="nav-number">3.</span> <span class="nav-text">三、export和export default的区别与联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、import和require的区别与联系"><span class="nav-number">4.</span> <span class="nav-text">四、import和require的区别与联系</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
